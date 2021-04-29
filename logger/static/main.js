@@ -8,7 +8,7 @@ define([
     
       var log = [];
       var loggingEnabled = false;
-      console.log("Loaded Logger")
+//       console.log("Loaded Logger")
       var log = [];
       var logID = '_' + Math.random().toString(36).substr(2, 9);
 
@@ -25,13 +25,13 @@ define([
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader("ID", logID);
         xhr.send(jsonData);
-        console.log("sent logID:", logID);
-        console.log("sent data:", jsonData);
+//         console.log("sent logID:", logID);
+//         console.log("sent data:", jsonData);
         log = [];
       }
       function addLogEntry(newItem) {
         if (loggingEnabled) {
-          console.log("addLogEntry:",newItem)
+//           console.log("addLogEntry:",newItem)
           log.push(newItem);
           if (!lastSaved || (Date.now() - lastSaved) > 6000) { 
             sendLog();
